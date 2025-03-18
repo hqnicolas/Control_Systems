@@ -23,9 +23,9 @@ g = tf([0 0 100],[1 2 25])
 
 A função de transferência `g` é dada por:
 
-\[
+$$
 g(s) = \frac{100}{s^2 + 2s + 25}
-\]
+$$
 
 ## 3. Análise de Polos e Zeros
 
