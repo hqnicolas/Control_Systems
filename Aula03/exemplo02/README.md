@@ -4,7 +4,6 @@ Neste exercício, continuamos a análise de sistemas de controle utilizando o Oc
 
 ![Octave_stepg1g2](https://github.com/user-attachments/assets/6902d2bb-7d9b-40ec-8a46-bbbdcb2b0895)
 
-
 ## 1. Definindo as Funções de Transferência
 
 Definimos duas funções de transferência `g1` e `g2` com os seguintes parâmetros:
@@ -17,9 +16,9 @@ g1 = tf([0 0 200],[1 200 0])
 
 A função de transferência `g1` é dada por:
 
-\[
+$$
 g_1(s) = \frac{200}{s^2 + 200s}
-\]
+$$
 
 ### Função de Transferência g2
 
@@ -29,9 +28,9 @@ g2 = tf([0 0 200],[1 200 200])
 
 A função de transferência `g2` é dada por:
 
-\[
+$$
 g_2(s) = \frac{200}{s^2 + 200s + 200}
-\]
+$$
 
 ## 2. Resposta ao Degrau das Funções de Transferência
 
