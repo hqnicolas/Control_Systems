@@ -2,6 +2,9 @@
 
 Neste exercício, utilizamos o Octave para analisar um sistema de controle representado por uma função de transferência.
 
+![octave](https://github.com/user-attachments/assets/5eea40ed-5e7e-452d-bcbe-1100e0734b71)
+
+
 ## 1. Carregando o Pacote de Sinal
 
 Primeiro, carregamos o pacote de sinal necessário para trabalhar com funções de transferência:
