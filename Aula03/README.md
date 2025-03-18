@@ -19,8 +19,14 @@ A resposta ao impulso, resposta ao degrau e outros parâmetros do sistema são c
 
 Neste exemplo, duas funções de transferência diferentes são analisadas e comparadas. As funções são dadas por:
 
-1. $$ g_1(s) = \frac{200}{s^2 + 200s} $$
-2. $$ g_2(s) = \frac{200}{s^2 + 200s + 200} $$
+1.
+$$
+g_1(s) = \frac{200}{s^2 + 200s}
+$$
+2.
+$$
+g_2(s) = \frac{200}{s^2 + 200s + 200}
+$$
 
 A resposta ao degrau de ambos os sistemas é calculada e comparada para entender seu comportamento dinâmico.  
 **[Veja o código completo aqui](https://github.com/hqnicolas/Control_Systems/tree/main/Aula03/exemplo02)**
