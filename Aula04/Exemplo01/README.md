@@ -1,5 +1,7 @@
 # Exercício de Sistemas de Controle com Octave
 
+![ex3](https://github.com/user-attachments/assets/51591003-f391-431b-b758-6933692c08a2)
+
 Neste exercício, analisaremos uma função de transferência utilizando o Octave, definindo seus parâmetros, calculando a resposta ao degrau e explorando o comportamento do sistema.
 
 ## 1. Definição da Função de Transferência
@@ -30,6 +32,9 @@ A resposta ao degrau fornece informações sobre o comportamento do sistema em r
 $$
 \text{Máximo da saída } y_{\text{máx}} = 1.1000
 $$
+
+![ex3_octave](https://github.com/user-attachments/assets/797a3a44-c544-44c3-9ddd-38ecf7fb4a60)
+
 
 ## Conclusão
 
