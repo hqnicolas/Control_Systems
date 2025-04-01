@@ -8,3 +8,8 @@ Publicando aqui meu Hello World em Controle
 # [Exercícios de Sistemas de Controle](https://github.com/hqnicolas/Control_Systems/tree/main/Aula04)
 - [exercicio01](https://github.com/hqnicolas/Control_Systems/tree/main/Aula04/Exemplo01) Comportamento dinâmico do sistema.
 - [exercicio02](https://github.com/hqnicolas/Control_Systems/tree/main/Aula04/Exemplo02) polos e zeros das funções de transferência.
+
+# [Estabilidade de sistemas de controle](https://github.com/hqnicolas/Control_Systems/tree/main/Aula05)
+- [exercicio01](https://github.com/hqnicolas/Control_Systems/blob/main/Aula05/exemplo01.md) calcular as raízes do polinômio
+- [exercicio02](https://github.com/hqnicolas/Control_Systems/blob/main/Aula05/exemplo02.md)  diferentes valores de ( k ) 
+- [exercicio03](https://github.com/hqnicolas/Control_Systems/blob/main/Aula05/exemplo03.md)  Análise de Polos e Resposta ao Degrau
