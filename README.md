@@ -13,3 +13,7 @@ Publicando aqui meu Hello World em Controle
 - [exercicio01](https://github.com/hqnicolas/Control_Systems/blob/main/Aula05/exemplo01.md) calcular as raízes do polinômio
 - [exercicio02](https://github.com/hqnicolas/Control_Systems/blob/main/Aula05/exemplo02.md)  diferentes valores de ( k ) 
 - [exercicio03](https://github.com/hqnicolas/Control_Systems/blob/main/Aula05/exemplo03.md)  Análise de Polos e Resposta ao Degrau
+
+# [Projeto do Controlador via Lugar Geométrico das Raízes](https://github.com/hqnicolas/WebDroneControle/tree/main/controller)
+- [Readme](https://github.com/hqnicolas/WebDroneControle)
+- [Online Drone Simulator](https://hqnicolas.github.io/WebDroneControle/)
