@@ -16,6 +16,7 @@
     E = \sum_{n=-\infty}^{\infty} |x[n]|^2 < \infty
     $$
 
+
 - **Características:**
   - Tipicamente **transitórios**
   - **Tendem a zero** conforme t → ∞
