@@ -7,13 +7,17 @@
   - Contínuo:
 
     $$
+
     E = \int_{-\infty}^{\infty} |x(t)|^2 \, dt < \infty
+
     $$
 
   - Discreto:
 
     $$
+
     E = \sum_{n=-\infty}^{\infty} |x[n]|^2 < \infty
+
     $$
 
 
@@ -32,13 +36,17 @@
   - Contínuo:
 
     $$
+
     P = \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^{T} |x(t)|^2 \, dt < \infty, \quad P > 0
+
     $$
 
   - Discreto:
 
     $$
+
     P = \lim_{N \to \infty} \frac{1}{2N+1} \sum_{n=-N}^{N} |x[n]|^2 < \infty, \quad P > 0
+
     $$
 
 - **Características:**
