@@ -5,10 +5,13 @@
 - **Definição:** Um sinal \( x(t) \) (ou \( x[n] \)) é **de energia** se a **energia total** dele for **finita**:
 
   - Contínuo:
+
     $$
     E = \int_{-\infty}^{\infty} |x(t)|^2 \, dt < \infty
     $$
+
   - Discreto:
+
     $$
     E = \sum_{n=-\infty}^{\infty} |x[n]|^2 < \infty
     $$
