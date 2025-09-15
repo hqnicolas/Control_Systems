@@ -12,9 +12,9 @@
 
   - Discreto:
 
-    $$
-    E = \sum_{n=-\infty}^{\infty} |x[n]|^2 < \infty
-    $$
+$$
+E = \sum_{n=-\infty}^{\infty} |x[n]|^2 < \infty
+$$
 
 - **Características:**
   - Tipicamente **transitórios**
@@ -31,13 +31,17 @@
 - **Definição:** Um sinal é de **potência** se sua **potência média** for **finita e diferente de zero**, mesmo que a energia total seja infinita:
 
   - Contínuo:
-    $$
-    P = \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^{T} |x(t)|^2 \, dt < \infty, \quad P > 0
-    $$
+
+$$
+P = \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^{T} |x(t)|^2 \, dt < \infty, \quad P > 0
+$$
+
   - Discreto:
-    $$
-    P = \lim_{N \to \infty} \frac{1}{2N+1} \sum_{n=-N}^{N} |x[n]|^2 < \infty, \quad P > 0
-    $$
+
+$$
+P = \lim_{N \to \infty} \frac{1}{2N+1} \sum_{n=-N}^{N} |x[n]|^2 < \infty, \quad P > 0
+$$
+
 
 - **Características:**
   - Tipicamente **periódicos**
