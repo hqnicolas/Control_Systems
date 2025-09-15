@@ -5,12 +5,16 @@
 - **Definição:** Um sinal x(t) (ou x[n]) é **de energia** se a **energia total** dele for **finita**:
 
   - Contínuo:
-  
-    E = ∫ |x(t)|² dt, de -∞ até ∞ — e esse valor deve ser finito.
+
+    $$
+    E = \int_{-\infty}^{\infty} |x(t)|^2 \, dt < \infty
+    $$
 
   - Discreto:
-  
-    E = Σ |x[n]|², de n = -∞ até ∞ — também com valor finito.
+
+    $$
+    E = \sum_{n=-\infty}^{\infty} |x[n]|^2 < \infty
+    $$
 
 - **Características:**
   - Tipicamente **transitórios**
@@ -25,12 +29,16 @@
 - **Definição:** Um sinal é de **potência** se sua **potência média** for **finita e diferente de zero**, mesmo que a energia total seja infinita:
 
   - Contínuo:
-  
-    P = lim (T → ∞) [1 / (2T)] ∫ |x(t)|² dt, de -T até T — e P deve ser finita e maior que zero.
+
+    $$
+    P = \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^{T} |x(t)|^2 \, dt < \infty, \quad P > 0
+    $$
 
   - Discreto:
-  
-    P = lim (N → ∞) [1 / (2N + 1)] Σ |x[n]|², de n = -N até N — idem.
+
+    $$
+    P = \lim_{N \to \infty} \frac{1}{2N+1} \sum_{n=-N}^{N} |x[n]|^2 < \infty, \quad P > 0
+    $$
 
 - **Características:**
   - Tipicamente **periódicos**
