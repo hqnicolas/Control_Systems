@@ -11,12 +11,11 @@ Um sistema pode ser convenientemente ilustrado por uma "caixa preta", como um co
 
 *[Figura 1.25 Representação de um sistema.]* 
 
-O estudo de sistemas consiste em três grandes áreas: modelagem matemática, análise e projeto. Apesar de estarmos trabalhando com modelagem matemática, nosso objetivo principal está na análise e projeto. A maior parte deste livro é dedicada ao problema de análise como determinar as saídas do sistema para dadas entradas, dado o modelo matemático do sistema (ou regras que governam o sistema). Em uma proporção menor, também iremos considerar o problema de projeto ou síntese como construir um sistema que irá produzir um determinado conjunto de saídas de dadas entradas. 
+O estudo de sistemas consiste em três grandes áreas: modelagem matemática, análise e projeto. Apesar de estarmos trabalhando com modelagem matemática, nosso objetivo principal está na análise e projeto. A maior parte deste livro é dedicada ao problema de análise como determinar as saídas do sistema para dadas entradas, dado o modelo matemático do sistema (ou regras que governam o sistema). Em uma proporção menor, também iremos considerar o problema de projeto ou síntese como construir um sistema que irá produzir um determinado conjunto de saídas de dadas entradas.
 
-<img width="583" height="279" alt="image" src="https://github.com/user-attachments/assets/5750daba-889b-4dd6-bbfd-4bd7c5824762" />
+### DADOS NECESSÁRIOS PARA DETERMINAR A RESPOSTA DO SISTEMA 
 
-
-### DADOS NECESSÁRIOS PARA DETERMINAR A RESPOSTA DO SISTEMA Para compreender quais dados são necessários para calcular a resposta de um sistema, considere um circuito RC simples com uma fonte de corrente $x(t)$ como entrada (Fig. 1.26). A tensão de saída $y(t)$ é dada por 
+Para compreender quais dados são necessários para calcular a resposta de um sistema, considere um circuito RC simples com uma fonte de corrente $x(t)$ como entrada (Fig. 1.26). A tensão de saída $y(t)$ é dada por 
 
 $$
 y(t)=Rx(t)+\frac{1}{C}\int_{-\infty}^{t}x(\tau)d\tau
@@ -34,7 +33,11 @@ $$
 y(t)=v_{C}(0)+Rx(t)+\frac{1}{C}\int_{0}^{t}x(t)dt \quad t\ge0
 $$
 
-(1.36c) *[Figura 1.26 Exemplo de um sistema elétrico simples.]* Essa equação pode ser facilmente generalizada para 
+<img width="583" height="279" alt="image" src="https://github.com/user-attachments/assets/5750daba-889b-4dd6-bbfd-4bd7c5824762" />
+
+(1.36c) *[Figura 1.26 Exemplo de um sistema elétrico simples.]* 
+
+Essa equação pode ser facilmente generalizada para 
 
 $$
 y(t)=v_{C}(t_{0})+Rx(t)+\frac{1}{C}\int_{t_{0}}^{t}x(\tau)d~\tau \quad t\ge t_{0}
@@ -200,6 +203,8 @@ Sistemas cujos parâmetros não são alterados com o tempo são invariantes no t
 
 Também podemos ilustrar esta propriedade como apresentado na Fig. 1.29. Se o sistema for invariante no tempo, então a saída atrasada $y(t-T)$ pode ser obtida, também, atrasando primeiro a entrada $x(t)$ antes de aplicá-la ao sistema, como mostrado na Fig. 1.29b. Em outras palavras, o sistema S e o atraso de tempo são comutativos se o sistema for invariante no tempo. 
 
+<img width="545" height="250" alt="image" src="https://github.com/user-attachments/assets/64841297-61a9-4579-acd9-412fc079d842" />
+
 *[Figura 1.29 Ilustração da propriedade de invariância no tempo.]* 
 
 Um sistema com uma relação de entrada/saída descrita por uma equação diferencial linear na forma dada no Exemplo 1.9 [Eq. (1.44)] é um sistema linear invariante no tempo (LIT) quando os coeficientes $a_i$ e $b_i$ são constantes. Se estes coeficientes forem funções do tempo, então o sistema é um sistema linear variante no tempo. 
@@ -237,7 +242,41 @@ $$
 > y(t)=\int_{t-S}^{t+S}x(\tau)d\tau
 > $$
 > 
-> Mostre que esse sistema pode ser implementado fisicamente se aceitarmos um atraso de 5 segundos da saída. ### 1.7-5 Sistemas em Tempo Contínuo e em Tempo Discreto Sinais definidos ou especificados em uma faixa de valores contínua de tempo são sinais contínuos no tempo, representados pelos símbolos $x(t)$, $y(t)$ e assim por diante. sistemas cujas entradas e saídas são sinais contínuos no tempo são sistemas em tempo contínuo. Por outro lado, sinais definidos apenas em instantes discretos de tempo $t_{0},t_{1},t_{2},...t_{n},...$ são sinais discretos no tempo. Sistemas cujas entradas e saídas são sinais discretos no tempo são sistemas em tempo discreto. Por conveniência, iremos simplificar esta notação para $x[n], y[n],...$, onde fica entendido que $x[n]=x(nT)$ e que n é algum inteiro. *[Figura 1.31 Um sinal em tempo discreto.]* *[Figura 1.32 Processamento de sinais contínuos no tempo por sistemas discretos no tempo.]* ### 1.7-6 Sistemas Analógicos e Digitais Um sistema cujos sinais de entrada e saída são analógicos é um sistema analógico. Um sistema cujos sinais de entrada e saída são digitais é um sistema digital. Um computador digital é um exemplo de um sistema digital (binário). ### 1.7-7 Sistemas Inversíveis e Não Inversíveis Se pudermos obter a entrada $x(t)$ da saída $y(t)$ correspondente através de alguma operação, o sistema S é dito ser inversível. Para um sistema inversível, é essencial que toda entrada possua uma única saída, de tal forma que exista um mapeamento de um-para-um entre a entrada e a saída correspondente. O sistema que efetua a operação inversa é o sistema inverso de S. *[Figura 1.33 O cascateamento de um sistema com sua inversa resulta em um sistema identidade.]* ### 1.7-8 Sistemas Estáveis e Instáveis Se cada entrada limitada aplicada ao terminal de entrada resultar em uma saída limitada, o sistema é dito ser externamente estável. Este tipo de estabilidade também é conhecida como estabilidade no sentido BIBO (bounded-input/bounded-output). > **EXERCÍCIO E1.16** > Mostre que o sistema descrito pela equação $y(t)=x^{2}(t)$ é não inversível com estabilidade no sentido BIBO. ## 1.8 MODELO DE SISTEMA: DESCRIÇÃO ENTRADA-SAÍDA A descrição de um sistema em termos de medidas nos terminais de entrada e saída é chamada de descrição entrada-saída. O primeiro passo na análise de um sistema é a construção do modelo do sistema, o qual é a expressão matemática ou regra que aproxima satisfatoriamente o comportamento dinâmico do sistema. ### 1.8-1 Sistemas Elétricos Para construir um modelo de sistema, devemos estudar as relações entre as diferentes variáveis do sistema. Em sistemas elétricos, por exemplo, devemos determinar um modelo satisfatório para a relação tensão-corrente de cada elemento e as leis de interconexão (Leis de Kirchhoff). > **EXEMPLO 1.10** > Para o circuito RLC série da Fig. 1.34, determine a equação de entrada-saída que relaciona a tensão de entrada $x(t)$ com a corrente de saída (corrente de malha) $y(t)$. > 
+> Mostre que esse sistema pode ser implementado fisicamente se aceitarmos um atraso de 5 segundos da saída.
+
+### 1.7-5 Sistemas em Tempo Contínuo e em Tempo Discreto 
+
+Sinais definidos ou especificados em uma faixa de valores contínua de tempo são sinais contínuos no tempo, representados pelos símbolos $x(t)$, $y(t)$ e assim por diante. sistemas cujas entradas e saídas são sinais contínuos no tempo são sistemas em tempo contínuo. Por outro lado, sinais definidos apenas em instantes discretos de tempo $t_{0},t_{1},t_{2},...t_{n},...$ são sinais discretos no tempo. 
+
+Sistemas cujas entradas e saídas são sinais discretos no tempo são sistemas em tempo discreto. Por conveniência, iremos simplificar esta notação para $x[n], y[n],...$, onde fica entendido que $x[n]=x(nT)$ e que n é algum inteiro. 
+
+*[Figura 1.31 Um sinal em tempo discreto.]* 
+
+
+*[Figura 1.32 Processamento de sinais contínuos no tempo por sistemas discretos no tempo.]* 
+
+### 1.7-6 Sistemas Analógicos e Digitais 
+
+Um sistema cujos sinais de entrada e saída são analógicos é um sistema analógico. Um sistema cujos sinais de entrada e saída são digitais é um sistema digital. Um computador digital é um exemplo de um sistema digital (binário). 
+
+### 1.7-7 Sistemas Inversíveis e Não Inversíveis Se pudermos obter a entrada $x(t)$ da saída $y(t)$ correspondente através de alguma operação, o sistema S é dito ser inversível. Para um sistema inversível, é essencial que toda entrada possua uma única saída, de tal forma que exista um mapeamento de um-para-um entre a entrada e a saída correspondente. O sistema que efetua a operação inversa é o sistema inverso de S. 
+
+*[Figura 1.33 O cascateamento de um sistema com sua inversa resulta em um sistema identidade.]* 
+
+
+### 1.7-8 Sistemas Estáveis e Instáveis Se cada entrada limitada aplicada ao terminal de entrada resultar em uma saída limitada, o sistema é dito ser externamente estável. Este tipo de estabilidade também é conhecida como estabilidade no sentido BIBO (bounded-input/bounded-output). 
+> **EXERCÍCIO E1.16**
+> > Mostre que o sistema descrito pela equação $y(t)=x^{2}(t)$ é não inversível com estabilidade no sentido BIBO.
+
+## 1.8 MODELO DE SISTEMA: DESCRIÇÃO ENTRADA-SAÍDA 
+
+A descrição de um sistema em termos de medidas nos terminais de entrada e saída é chamada de descrição entrada-saída. O primeiro passo na análise de um sistema é a construção do modelo do sistema, o qual é a expressão matemática ou regra que aproxima satisfatoriamente o comportamento dinâmico do sistema. 
+
+
+### 1.8-1 Sistemas Elétricos Para construir um modelo de sistema, devemos estudar as relações entre as diferentes variáveis do sistema. Em sistemas elétricos, por exemplo, devemos determinar um modelo satisfatório para a relação tensão-corrente de cada elemento e as leis de interconexão (Leis de Kirchhoff). 
+> **EXEMPLO 1.10**
+> > Para o circuito RLC série da Fig. 1.34, determine a equação de entrada-saída que relaciona a tensão de entrada $x(t)$ com a corrente de saída (corrente de malha) $y(t)$.
+> 
 > *[Figura 1.34]* > 
 > Aplicando a lei de Kirchhoff das tensões para a malha teremos, >
 >
@@ -268,7 +307,8 @@ $$
 > $$
 
 > **EXEMPLO 1.11** > Determine a equação relacionando a entrada e a saída para o circuito RC série da Fig. 1.35 se a entrada for a tensão $x(t)$ e a saída for (a) a corrente de malha $i(t)$ (b) a tensão do capacitor $y(t)$. > 
-> *[Figura 1.35]* > 
+> *[Figura 1.35]*
+> 
 > (a) A equação de malha para o circuito é >
 >
 > $$
@@ -281,7 +321,8 @@ $$
 > (3D+1)y(t)=x(t)
 > $$
 > 
-> ou >
+> ou
+>
 > $$
 > 3\frac{dy}{dt}+y(t)=x(t)
 > $$
