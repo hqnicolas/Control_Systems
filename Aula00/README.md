@@ -334,15 +334,32 @@ A descrição de um sistema em termos de medidas nos terminais de entrada e saí
 > 3\frac{dy}{dt}+y(t)=x(t)
 > $$
 
-> **EXERCÍCIO E1.17** > Para o circuito RLC da Fig. 1.34, determine a relação de entrada-saída se a saída for a tensão $v_{L}(t)$ do indutor. > **RESPOSTA:** $(D^{2}+3D+2)v_{L}(t)=D^{2}x(t)$ > **EXERCÍCIO E1.18** > Para o circuito RLC da Fig. 1.34, determine a relação de entrada-saída se a saída for a tensão $v_{c}(t)$ do capacitor. > **RESPOSTA:** $(D^{2}+3D+2)v_{C}(t)=2x(t)$ ### 1.8-2 Sistemas Mecânicos #### SISTEMAS TRANSLACIONAIS Os elementos básicos são massas ideais, molas lineares e amortecedores. * **Massa M:** $x(t)=M\ddot{y}(t)=M\frac{d^{2}y}{dt^{2}}=MD^{2}y(t)$ * **Mola Linear K:** $x(t)=Ky(t)$ * **Amortecedor Linear B:** $x(t)=B\dot{y}(t)=B\frac{dy}{dt}=BDy(t)$ *[Figura 1.36 Alguns elementos em sistemas mecânicos translacionais.]* > **EXEMPLO 1.12** > Determine a relação entrada-saída para o sistema mecânico translacional mostrado na Fig. 1.37a. A entrada é a força $x(t)$ e a saída é a posição da massa $y(t)$. > 
+> **EXERCÍCIO E1.17**
+> Para o circuito RLC da Fig. 1.34, determine a relação de entrada-saída se a saída for a tensão $v_{L}(t)$ do indutor.
+> **RESPOSTA:** $(D^{2}+3D+2)v_{L}(t)=D^{2}x(t)$
+> **EXERCÍCIO E1.18**
+> Para o circuito RLC da Fig. 1.34, determine a relação de entrada-saída se a saída for a tensão $v_{c}(t)$ do capacitor.
+> **RESPOSTA:** $(D^{2}+3D+2)v_{C}(t)=2x(t)$ ### 1.8-2 Sistemas Mecânicos
+
+#### SISTEMAS TRANSLACIONAIS 
+Os elementos básicos são massas ideais, molas lineares e amortecedores. 
+* **Massa M:** $x(t)=M\ddot{y}(t)=M\frac{d^{2}y}{dt^{2}}=MD^{2}y(t)$ * **Mola Linear K:** $x(t)=Ky(t)$ * **Amortecedor Linear B:** $x(t)=B\dot{y}(t)=B\frac{dy}{dt}=BDy(t)$
+
+*[Figura 1.36 Alguns elementos em sistemas mecânicos translacionais.]* 
+
+> **EXEMPLO 1.12**
+> Determine a relação entrada-saída para o sistema mecânico translacional mostrado na Fig. 1.37a. A entrada é a força $x(t)$ e a saída é a posição da massa $y(t)$.
+> 
 > *[Figura 1.37]* > 
-> Usando a segunda lei de Newton, a força total deve ser $M\ddot{y}(t)$. Logo, >
+> Usando a segunda lei de Newton, a força total deve ser $M\ddot{y}(t)$. Logo,
+>
 >
 > $$
 > M\ddot{y}(t)=-B\dot{y}(t)-Ky(t)+x(t)
 > $$
 > 
-> ou >
+> ou
+>
 >
 > $$
 > (MD^{2}+BD+K)y(t)=x(t)
@@ -372,7 +389,22 @@ $$
 J\frac{d^{2}\theta}{dt^{2}}+B\frac{d\theta}{dt}=K_{T}x(t)
 $$
 
-## 1.9 DESCRIÇÃO INTERNA E EXTERNA DE UM SISTEMA A relação de entrada-saída de um sistema é uma descrição externa do sistema. Uma descrição interna é capaz de fornecer a informação completa sobre todos os possíveis sinais do sistema. Uma descrição externa pode não fornecer uma informação completa como esta. Considere o circuito da Fig. 1.41a. Para a descrição externa, nenhuma medição ou observação externa pode detectar a presença do capacitor. Se o circuito estiver encapsulado, é impossível determinar as correntes ou tensões internas a partir de medições externas. *[Figura 1.41 Um sistema que não pode ser descrito por medidas externas.]* Isso ocorre quando o sistema é não controlável ou não observável. Na Fig. 1.42a, parte do sistema (subsistema $S_{2}$) não pode ser controlada pela entrada $x(t)$. Na Fig. 1.42b, algumas das saídas do sistema (aquelas no subsistema $S_{2}$) não podem ser observadas a partir dos terminais de saída. *[Figura 1.42 Estruturas de sistemas não controláveis e não observáveis.]* ## 1.10 DESCRIÇÃO INTERNA: DESCRIÇÃO EM ESPAÇO DE ESTADO Nesta abordagem, identificamos certas variáveis chave, chamadas de variáveis de estado. Em um circuito RLC passivo, as tensões independentes dos capacitores e as correntes dos indutores são as variáveis de estado. O conhecimento das variáveis de estado permite que toda possível saída do sistema seja calculada. > **EXEMPLO 1.14** > Considere o circuito da Fig. 1.43 com $q_{1}$ e $q_{2}$ como variáveis de estado e escreva as equações de estado. > 
+## 1.9 DESCRIÇÃO INTERNA E EXTERNA DE UM SISTEMA 
+
+A relação de entrada-saída de um sistema é uma descrição externa do sistema. Uma descrição interna é capaz de fornecer a informação completa sobre todos os possíveis sinais do sistema. Uma descrição externa pode não fornecer uma informação completa como esta. Considere o circuito da Fig. 1.41a. Para a descrição externa, nenhuma medição ou observação externa pode detectar a presença do capacitor. Se o circuito estiver encapsulado, é impossível determinar as correntes ou tensões internas a partir de medições externas. 
+
+*[Figura 1.41 Um sistema que não pode ser descrito por medidas externas.]* 
+
+Isso ocorre quando o sistema é não controlável ou não observável. Na Fig. 1.42a, parte do sistema (subsistema $S_{2}$) não pode ser controlada pela entrada $x(t)$. Na Fig. 1.42b, algumas das saídas do sistema (aquelas no subsistema $S_{2}$) não podem ser observadas a partir dos terminais de saída. 
+
+*[Figura 1.42 Estruturas de sistemas não controláveis e não observáveis.]* 
+
+## 1.10 DESCRIÇÃO INTERNA: DESCRIÇÃO EM ESPAÇO DE ESTADO 
+
+Nesta abordagem, identificamos certas variáveis chave, chamadas de variáveis de estado. Em um circuito RLC passivo, as tensões independentes dos capacitores e as correntes dos indutores são as variáveis de estado. O conhecimento das variáveis de estado permite que toda possível saída do sistema seja calculada. 
+> **EXEMPLO 1.14**
+> Considere o circuito da Fig. 1.43 com $q_{1}$ e $q_{2}$ como variáveis de estado e escreva as equações de estado.
+> 
 > *[Figura 1.43 Escolhendo condições iniciais adequadas em um circuito.]* > 
 > Como $\dot{q}_{1}$ é a corrente através do capacitor, >
 >
@@ -414,9 +446,14 @@ $$
 > y(t)=2[\frac{x}{10}-\frac{\dot{q}}{2}]+2[\frac{x}{10}+\frac{\dot{q}}{2}] = \frac{2}{5}x(t)
 > $$
 > 
-> A equação de estado mostra que o estado $q(t)$ é independente da entrada $x(t)$, portanto, o estado do sistema q não pode ser controlado pela entrada. Além disso, a equação de saída mostra que a saída $y(t)$ não depende do estado $q(t)$. Logo, o estado do sistema não pode ser observado a partir dos terminais de saída. Desta forma, o sistema não é nem controlável e nem observável. Técnicas de espaço de estado são úteis por várias razões, incluindo: 1.  Grande generalidade (sistemas não lineares, variantes no tempo, MIMO). 2.  Uso de notação matricial e álgebra linear. 3.  Fácil simulação em computadores digitais. 4.  Para sistemas de segunda ordem, um método gráfico (análise no plano de fase) pode ser utilizado. > **EXERCÍCIO Ε1.20** > Escreva as equações de estado para o circuito RLC série mostrado na Fig. 1.45 utilizando a corrente do indutor $q_{1}(t)$ e a tensão do capacitor $q_{2}(t)$ como variáveis de estado. > 
-> *[Figura 1.45]* > 
-> **RESPOSTA** >
+> A equação de estado mostra que o estado $q(t)$ é independente da entrada $x(t)$, portanto, o estado do sistema q não pode ser controlado pela entrada. Além disso, a equação de saída mostra que a saída $y(t)$ não depende do estado $q(t)$. Logo, o estado do sistema não pode ser observado a partir dos terminais de saída. Desta forma, o sistema não é nem controlável e nem observável. Técnicas de espaço de estado são úteis por várias razões, incluindo: 1.  Grande generalidade (sistemas não lineares, variantes no tempo, MIMO). 2.  Uso de notação matricial e álgebra linear. 3.  Fácil simulação em computadores digitais. 4.  Para sistemas de segunda ordem, um método gráfico (análise no plano de fase) pode ser utilizado.
+> **EXERCÍCIO Ε1.20**
+> Escreva as equações de estado para o circuito RLC série mostrado na Fig. 1.45 utilizando a corrente do indutor $q_{1}(t)$ e a tensão do capacitor $q_{2}(t)$ como variáveis de estado. > 
+>
+*[Figura 1.45]* 
+> 
+> **RESPOSTA**
+>
 >
 > $$
 > \dot{q}_{1}=-3q_{1}-q_{2}+x
@@ -426,4 +463,9 @@ $$
 > \dot{q}_{2}=2q_{1}
 > $$
 
-## 1.11 RESUMO Um sinal é um conjunto de dados ou informação. Um sistema processa um sinal de entrada para produzir sinais de saída. Um sistema pode ser implementado em hardware ou software. Uma medida do tamanho de um sinal é sua energia ou potência. Sinais podem ser classificados de diversas formas: 1.  **Contínuo no tempo** vs. **Discreto no tempo**: qualifica a natureza do sinal ao longo do eixo do tempo. 2.  **Analógico** vs. **Digital**: qualifica a natureza da amplitude do sinal. 3.  **Periódico** vs. **Não periódico**: um sinal periódico $x(t)$ satisfaz $x(t)=x(t+T_{0})$ e existe em todo o intervalo de tempo de $-\infty<t<\infty$. Um sinal causal é zero para $t<0$. 4.  **Sinal de energia** vs. **Sinal de potência**: um sinal pode ser um ou outro, mas não os dois. Existem também sinais que não são nem de energia nem de potência. 
+## 1.11 RESUMO 
+Um sinal é um conjunto de dados ou informação. Um sistema processa um sinal de entrada para produzir sinais de saída. Um sistema pode ser implementado em hardware ou software. Uma medida do tamanho de um sinal é sua energia ou potência. Sinais podem ser classificados de diversas formas: 
+1.  **Contínuo no tempo** vs. **Discreto no tempo**: qualifica a natureza do sinal ao longo do eixo do tempo.
+2.  **Analógico** vs. **Digital**: qualifica a natureza da amplitude do sinal. 
+3.  **Periódico** vs. **Não periódico**: um sinal periódico $x(t)$ satisfaz $x(t)=x(t+T_{0})$ e existe em todo o intervalo de tempo de $-\infty<t<\infty$. Um sinal causal é zero para $t<0$. 
+4.  **Sinal de energia** vs. **Sinal de potência**: um sinal pode ser um ou outro, mas não os dois. Existem também sinais que não são nem de energia nem de potência. 
