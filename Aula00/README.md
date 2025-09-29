@@ -298,8 +298,9 @@ A descrição de um sistema em termos de medidas nos terminais de entrada e saí
 
 ### 1.8-1 Sistemas Elétricos Para construir um modelo de sistema, devemos estudar as relações entre as diferentes variáveis do sistema. Em sistemas elétricos, por exemplo, devemos determinar um modelo satisfatório para a relação tensão-corrente de cada elemento e as leis de interconexão (Leis de Kirchhoff). 
 > **EXEMPLO 1.10**
-> > Para o circuito RLC série da Fig. 1.34, determine a equação de entrada-saída que relaciona a tensão de entrada $x(t)$ com a corrente de saída (corrente de malha) $y(t)$.
-> 
+>
+> Para o circuito RLC série da Fig. 1.34, determine a equação de entrada-saída que relaciona a tensão de entrada $x(t)$ com a corrente de saída (corrente de malha) $y(t)$.
+> <img width="468" height="224" alt="image" src="https://github.com/user-attachments/assets/24d20d85-c71d-4cfa-a614-faac1a25da13" />
 > *[Figura 1.34]* > 
 > Aplicando a lei de Kirchhoff das tensões para a malha teremos, >
 >
@@ -329,7 +330,9 @@ A descrição de um sistema em termos de medidas nos terminais de entrada e saí
 > (D^{2}+3D+2)y(t)=Dx(t)
 > $$
 
-> **EXEMPLO 1.11** > Determine a equação relacionando a entrada e a saída para o circuito RC série da Fig. 1.35 se a entrada for a tensão $x(t)$ e a saída for (a) a corrente de malha $i(t)$ (b) a tensão do capacitor $y(t)$. > 
+> **EXEMPLO 1.11** > Determine a equação relacionando a entrada e a saída para o circuito RC série da Fig. 1.35 se a entrada for a tensão $x(t)$ e a saída for (a) a corrente de malha $i(t)$ (b) a tensão do capacitor $y(t)$.
+> <img width="468" height="224" alt="image" src="https://github.com/user-attachments/assets/59b8a4ce-d4b6-45a9-b760-b894135007bb" />
+> 
 > *[Figura 1.35]*
 > 
 > (a) A equação de malha para o circuito é >
@@ -361,12 +364,16 @@ A descrição de um sistema em termos de medidas nos terminais de entrada e saí
 Os elementos básicos são massas ideais, molas lineares e amortecedores. 
 * **Massa M:** $x(t)=M\ddot{y}(t)=M\frac{d^{2}y}{dt^{2}}=MD^{2}y(t)$ * **Mola Linear K:** $x(t)=Ky(t)$ * **Amortecedor Linear B:** $x(t)=B\dot{y}(t)=B\frac{dy}{dt}=BDy(t)$
 
+<img width="816" height="226" alt="image" src="https://github.com/user-attachments/assets/f1d56f07-e040-44cf-bf33-c2b9a1d53fcc" />
+
 *[Figura 1.36 Alguns elementos em sistemas mecânicos translacionais.]* 
 
 > **EXEMPLO 1.12**
 > Determine a relação entrada-saída para o sistema mecânico translacional mostrado na Fig. 1.37a. A entrada é a força $x(t)$ e a saída é a posição da massa $y(t)$.
 > 
-> *[Figura 1.37]* > 
+> <img width="822" height="467" alt="image" src="https://github.com/user-attachments/assets/1bf48525-3e87-4b1e-87e7-5cd1a35ece26" />
+
+> *[Figura 1.37]*
 > Usando a segunda lei de Newton, a força total deve ser $M\ddot{y}(t)$. Logo,
 >
 >
@@ -381,7 +388,12 @@ Os elementos básicos são massas ideais, molas lineares e amortecedores.
 > (MD^{2}+BD+K)y(t)=x(t)
 > $$
 
-#### SISTEMAS ROTACIONAIS As variáveis são torque, posição angular ($\theta$), etc. * **Momento de Inércia J:** $torque=J\ddot{\theta}=J\frac{d^{2}\theta}{dt^{2}}=JD^{2}\theta(t)$ * **Mola de Torção K:** $torque=K\theta$ * **Amortecedor de Torção B:** $torque=B\dot{\theta}(t)=BD\theta(t)$ ### 1.8-3 Sistemas Eletromecânicos Consideraremos um exemplo de um motor CC controlado pela armadura. O torque $\mathcal{T}(t)$ gerado pelo motor é proporcional a corrente de armadura $x(t)$. Portanto, 
+#### SISTEMAS ROTACIONAIS 
+
+<img width="805" height="395" alt="image" src="https://github.com/user-attachments/assets/44ae99bd-730e-479a-9608-ab6d036a19f6" />
+
+
+As variáveis são torque, posição angular ($\theta$), etc. * **Momento de Inércia J:** $torque=J\ddot{\theta}=J\frac{d^{2}\theta}{dt^{2}}=JD^{2}\theta(t)$ * **Mola de Torção K:** $torque=K\theta$ * **Amortecedor de Torção B:** $torque=B\dot{\theta}(t)=BD\theta(t)$ ### 1.8-3 Sistemas Eletromecânicos Consideraremos um exemplo de um motor CC controlado pela armadura. O torque $\mathcal{T}(t)$ gerado pelo motor é proporcional a corrente de armadura $x(t)$. Portanto, 
 
 $$
 \mathcal{T}(t)=K_{T}x(t)
@@ -404,6 +416,9 @@ ou
 $$
 J\frac{d^{2}\theta}{dt^{2}}+B\frac{d\theta}{dt}=K_{T}x(t)
 $$
+
+<img width="781" height="254" alt="image" src="https://github.com/user-attachments/assets/25eba52b-3914-4b2c-847e-1b4fc879ded0" />
+
 
 ## 1.9 DESCRIÇÃO INTERNA E EXTERNA DE UM SISTEMA 
 
