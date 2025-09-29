@@ -13,29 +13,37 @@
 
 ### [cite_start]DADOS NECESSÁRIOS PARA DETERMINAR A RESPOSTA DO SISTEMA [cite: 16]
 [cite_start]Para compreender quais dados são necessários para calcular a resposta de um sistema, considere um circuito RC simples com uma fonte de corrente $x(t)$ como entrada (Fig. 1.26). [cite: 17] [cite_start]A tensão de saída $y(t)$ é dada por [cite: 18]
+
 $$
 y(t)=Rx(t)+\frac{1}{C}\int_{-\infty}^{t}x(\tau)d\tau
 $$
+
 (1.36a) [cite_start][cite: 19, 21]
 
 Dessa forma, a Eq. (1.36a) [cite_start]pode ser escrita como [cite: 23]
+
 $$
 y(t)=Rx(t)+\frac{1}{C}\int_{-\infty}^{0}x(\tau)d\tau+\frac{1}{C}\int_{0}^{t}x(\tau)d\tau
 $$
+
 (1.36b) [cite_start][cite: 24, 26]
 
 O termo médio do lado direito é $v_{c}(0)$ a tensão do capacitor para $t=0$. [cite_start]Portanto, [cite: 25]
+
 $$
 y(t)=v_{C}(0)+Rx(t)+\frac{1}{C}\int_{0}^{t}x(t)dt \quad t\ge0
 $$
+
 (1.36c) [cite_start][cite: 27]
 
 [cite_start]*[Figura 1.26 Exemplo de um sistema elétrico simples.]* [cite: 43]
 
 [cite_start]Essa equação pode ser facilmente generalizada para [cite: 44]
+
 $$
 y(t)=v_{C}(t_{0})+Rx(t)+\frac{1}{C}\int_{t_{0}}^{t}x(\tau)d~\tau \quad t\ge t_{0}
 $$
+
 (1.36d) [cite_start][cite: 45, 46]
 
 A partir da Eq. (1.36a)[cite_start], a tensão de saída $y(t)$ no instante pode ser calculada se soubermos a corrente de entrada fluindo no capacitor durante todo o seu passado. [cite: 47] [cite_start]Alternativamente, se soubermos a corrente de entrada $x(t)$ em algum momento $t_{0}$, então ainda podemos calcular $y(t)$ para $t\ge t_{0}$ a partir do conhecimento da corrente de entrada, desde que saibamos $v_{C}(t_{0})$, a tensão inicial do capacitor (tensão em $t_{0}$). [cite: 48] [cite_start]Portanto $v_{c}(t_{0})$ contém toda informação relevante sobre todo o passado do circuito que precisamos para calcular $y(t)$. [cite: 49]
@@ -57,41 +65,57 @@ A partir da Eq. (1.36a)[cite_start], a tensão de saída $y(t)$ no instante pode
 
 #### [cite_start]CONCEITO DE LINEARIDADE [cite: 65]
 [cite_start]Um sistema cuja saída seja proporcional a sua entrada é um exemplo de um sistema linear. [cite: 66] [cite_start]Mas a linearidade implica em mais do que isto, ela também implica a propriedade aditiva. [cite: 67] [cite_start]Ou seja, se várias entradas estão atuando em um sistema, então o efeito total no sistema devido a todas estas entradas pode ser determinado considerando uma entrada por vez e assumindo todas as outras entradas iguais a zero. [cite: 74] [cite_start]O efeito total é, então, a soma de todas as componentes de efeito. [cite: 75] [cite_start]Esta propriedade pode ser descrita por para um sistema linear, se uma entrada $x_{1}$ está atuando sozinha e possui efeito $y_{1}$, e se outra entrada $x_{2}$ também atua sozinha e possui efeito $y_{2}$, então, quando as duas entradas estiverem atuando no sistema, o efeito total será $y_{1}+y_{2}$. [cite: 76] [cite_start]Portanto, se [cite: 76]
+
 $$
 x_{1}\rightarrow y_{1}
 $$
+
 e
+
 $$
 x_{2}\rightarrow y_{2}
 $$
+
 [cite_start]então, para todo $x_{1}, x_{2}$ [cite: 77]
+
 $$
 x_{1}+x_{2}\rightarrow y_{1}+y_{2}
 $$
+
 (1.38) [cite_start][cite: 82, 83]
 
 [cite_start]Além disso, um sistema linear deve satisfazer a propriedade de homogeneidade ou escalonamento, a qual afirma que para uma número real ou imaginário arbitrário k, se uma entrada aumentar k vezes, seu efeito também aumentará k vezes. [cite: 84] [cite_start]Portanto, se [cite: 85]
+
 $$
 x\rightarrow y
 $$
+
 [cite_start]então para todo k real ou imaginário [cite: 87]
+
 $$
 kx\rightarrow ky
 $$
+
 (1.39) [cite_start][cite: 88, 89]
 
 [cite_start]Logo, a linearidade implica duas propriedades: homogeneidade (escalonamento) e aditividade. [cite: 90] [cite_start]As duas propriedades podem ser combinadas em uma única propriedade (superposição), a qual é descrita como mostrado a seguir. [cite: 91] [cite_start]Se, [cite: 92]
+
 $$
 x_{1}\rightarrow y_{1}
 $$
+
 e
+
 $$
 x_{2}\rightarrow y_{2}
 $$
+
 [cite_start]então para todos os valores de constantes $k_{1}$ e $k_{2}$. [cite: 97]
+
 $$
 k_{1}x_{1}+k_{2}x_{2}\longrightarrow k_{1}y_{1}+k_{2}y_{2}
 $$
+
 (1.40) [cite_start][cite: 98, 100]
 
 > [cite_start]**EXERCÍCIO E1.11** [cite: 103]
@@ -101,76 +125,102 @@ $$
 [cite_start]A saída de um sistema para $t\ge0$ é o resultado de duas causas independentes: a condição inicial do sistema (ou o estado do sistema) para $t=0$ e a entrada $x(t)$ para $t\ge0$. [cite: 109] [cite_start]Se um sistema é linear, a saída deve ser a soma das suas componentes resultantes destas duas causas: primeiro, a componente de reposta a entrada nula que resulta somente das condições iniciais para $t=0$ com a entrada $x(t)=0$ para $t\ge0$ e, então, a componente de resposta a estado nulo que resulta apenas da entrada $x(t)$ para $t\ge0$ quando as condições iniciais (para $t=0$) são consideradas iguais a zero. [cite: 109] [cite_start]Quando todas as condições iniciais apropriadas são nulas, o sistema é dito estar em estado nulo. [cite: 110]
 
 [cite_start]Em resumo, a resposta de um sistema linear pode ser expressa como a soma das componentes de entrada nula e estado nulo: [cite: 118]
+
 $$
 \text{resposta total = resposta entrada nula + resposta estado nulo}
 $$
+
 (1.41) [cite_start][cite: 119, 120]
 
 [cite_start]Essa propriedade de sistemas lineares, a qual permite a separação de uma saída em componentes resultantes das condições iniciais e da entrada, é chamada de propriedade de decomposição. [cite: 121] Para o circuito RC da Fig. 1.26, a resposta $y(t)$ foi determinada como sendo [veja Eq. (1.36c)[cite_start]] [cite: 122]
+
 $$
 y(t)=\underbrace{v_{C}(0)}_{\text{componente entrada nula}}+\underbrace{Rx(t)+\frac{1}{C}\int_{0}^{t}x(\tau)d\tau}_{\text{componente estado nulo}}
 $$
+
 (1.42) [cite_start][cite: 123, 124]
 
 A partir da Eq. 1.42, fica claro que se a entrada $x(t)=0$ para $t\ge0$, a saída será $y(t)=v_{c}(0)$. [cite_start]Logo $v_{c}(0)$ é a componente de entrada nula da resposta $y(t)$. [cite: 125] Similarmente, se o estado do sistema (a tensão $v_{c}$ neste caso) for zero para $t=0$ a saída é dada pela segunda componente do lado direito da Eq. (1.42)[cite_start]. [cite: 125] [cite_start]Claramente, esta é a componente de estado nulo da resposta $y(t)$. [cite: 126]
 
 > [cite_start]**EXEMPLO 1.9** [cite: 133]
 > [cite_start]Mostre que o sistema descrito pela equação [cite: 134]
+>
 > $$
 > \frac{dy}{dt}+3y(t)=x(t)
 > $$
+> 
 > [cite_start]é linear. [cite: 135, 136]
 > [cite_start]Seja a resposta do sistema às entradas $x_{1}(t)$ e $x_{2}(t)$, $y_{1}(t)$ e $y_{2}(t)$ respectivamente. [cite: 137] Então
+>
 > $$
 > \frac{dy_{1}}{dt}+3y_{1}(t)=x_{1}(t)
 > $$
+> 
 > e
+> 
 > $$
 > \frac{dy_{2}}{dt}+3y_{2}(t)=x_{2}(t)
 > $$
+> 
 > [cite_start]multiplicando a primeira equação por $k_{1}$, a segunda por $k_{2}$ e somando os resultados teremos [cite: 141]
+>
 > $$
 > \frac{d}{dt}[k_{1}y_{1}(t)+k_{2}y_{2}(t)]+3[k_{1}y_{1}(t)+k_{2}y_{2}(t)]=k_{1}x_{1}(t)+k_{2}x_{2}(t)
 > $$
+> 
 > (1.43) [cite_start][cite: 142, 143]
 > mas essa é a equação do sistema [Eq. (1.43)[cite_start]] com [cite: 150]
+>
 > $$
 > x(t)=k_{1}x_{1}(t)+k_{2}x_{2}(t)
 > $$
+> 
 > e
+> 
 > $$
 > y(t)=k_{1}y_{1}(t)+k_{2}y_{2}(t)
 > $$
+> 
 > [cite_start]Portanto, quando a entrada é $k_{1}x_{1}(t)+k_{2}x_{2}(t)$, a resposta do sistema é $k_{1}y_{1}(t)+k_{2}y_{2}(t)$. [cite: 156] [cite_start]Consequentemente, o sistema é linear. [cite: 156]
 
 [cite_start]Usando esse argumento, podemos facilmente generalizar o resultado para mostrar que um sistema descrito por uma equação diferencial na forma [cite: 157]
+
 $$
 a_{0}\frac{d^{N}y}{dt^{N}}+a_{1}\frac{d^{N-1}y}{dt^{N-1}}+\cdot\cdot\cdot+a_{N}y(t)=b_{N-M}\frac{d^{M}x}{dt^{M}}+\cdot\cdot\cdot+b_{N-1}\frac{dx}{dt}+b_{N}x(t)
 $$
+
 (1.44) [cite_start][cite: 158]
 [cite_start]é um sistema linear. [cite: 159]
 
 > [cite_start]**EXERCÍCIO E1.12** [cite: 161]
 > [cite_start]Mostre que o sistema descrito pela seguinte equação é linear: [cite: 162]
+>
 > $$
 > \frac{dy}{dt}+t^{2}y(t)=(2t+3)x(t)
 > $$
+> 
 
 > [cite_start]**EXERCÍCIO E1.13** [cite: 164]
 > [cite_start]Mostre que o sistema descrito pela seguinte equação não é linear: [cite: 165]
+>
 > $$
 > y(t)\frac{dy}{dt}+3y(t)=x(t)
 > $$
+> 
 
 #### [cite_start]MAIS COMENTÁRIOS SOBRE SISTEMAS LINEARES [cite: 167]
 [cite_start]A propriedade de superposição (linearidade) simplifica em muito a análise de sistemas lineares. [cite: 173] [cite_start]Devido à propriedade de decomposição, podemos calcular separadamente as duas componentes da saída. [cite: 174] [cite_start]Além disso, se descrevermos a entrada $x(t)$ pela soma de funções mais simples, [cite: 176]
+
 $$
 x(t)=a_{1}x_{1}(t)+a_{2}x_{2}(t)+\cdot\cdot\cdot+a_{m}x_{m}(t)
 $$
+
 [cite_start]então, pela linearidade, a resposta $y(t)$ é dada por [cite: 180]
+
 $$
 y(t)=a_{1}y_{1}(t)+a_{2}y_{2}(t)+\cdot\cdot\cdot+a_{m}y_{m}(t)
 $$
+
 (1.45) [cite_start][cite: 182, 183]
 
 [cite_start]Esta observação aparentemente trivial possui profundas implicações. [cite: 184] [cite_start]Por exemplo, considere uma entrada arbitrária $x(t)$ tal como a mostrada na Fig. 1.27a. [cite: 186] [cite_start]Podemos aproximar $x(t)$ pela soma de pulsos retangulares de largura $\Delta t$ e alturas variáveis. [cite: 187] [cite_start]Portanto, se soubermos a resposta do sistema a um impulso unitário, podemos determinar imediatamente a resposta do sistema a uma entrada $x(t)$ arbitrária através da soma das respostas do sistema a cada componente impulso de $x(t)$. [cite: 189]
@@ -190,9 +240,11 @@ Um sistema com uma relação de entrada/saída descrita por uma equação difere
 
 > [cite_start]**EXERCÍCIO E1.14** [cite: 248]
 > [cite_start]Mostre que um sistema descrito pela seguinte equação é um sistema com parâmetros variantes no tempo: [cite: 249]
+>
 > $$
 > y(t)=(sen~t)x(t-2)
 > $$
+> 
 > [cite_start][Dica: mostre que o sistema falha ao satisfazer a propriedade de invariância no tempo.] [cite: 251]
 
 ### [cite_start]1.7-3 Sistemas Instantâneos e Dinâmicos [cite: 252]
@@ -202,9 +254,11 @@ Um sistema com uma relação de entrada/saída descrita por uma equação difere
 [cite_start]Um sistema causal (também conhecido como físico ou não antecipativo) é aquele no qual a saída em qualquer instante $t_{0}$ depende apenas do valor da entrada $x(t)$ para $t\le t_{0}$. [cite: 269] [cite_start]Em outras palavras, o valor da saída no instante presente depende apenas do valor presente e passado da entrada $x(t)$, e não de seus valores futuros. [cite: 269] [cite_start]Para simplificar, em um sistema causal, a saída não pode começar antes da entrada ser aplicada. [cite: 270] [cite_start]Um sistema que viola a condição de causalidade é chamado de sistema não causal (ou antecipativo). [cite: 272]
 
 [cite_start]Qualquer sistema prático que opera no tempo real deve, necessariamente, ser causal. [cite: 273] [cite_start]Por exemplo, considere o sistema especificado por [cite: 276]
+
 $$
 y(t)=x(t-2)+x(t+2)
 $$
+
 (1.46) [cite_start][cite: 277, 278]
 
 Para a entrada $x(t)$ mostrada na Fig. 1.30a, a saída $y(t)$, calculada a partir da Eq. (1.46) [cite_start](mostrada na Fig. 1.30b), começa antes mesmo da entrada ser aplicada. [cite: 279, 280]
@@ -215,17 +269,21 @@ Para a entrada $x(t)$ mostrada na Fig. 1.30a, a saída $y(t)$, calculada a parti
 [cite_start]Eles são importantes no estudo de sistemas por diversas razões. [cite: 302]
 1.  [cite_start]Sistemas não causais são realizáveis quando a variável independente for outra que não o "tempo" (por exemplo, o espaço). [cite: 303]
 2.  [cite_start]Para o processamento de sinais, temos todos os dados de entrada gravados anteriormente. [cite: 309, 310] [cite_start]Um sistema não causal pode ser realizável, apesar de não ser em tempo real. [cite: 314] [cite_start]Podemos, portanto, ser capazes de implementar um sistema não causal desde que estejamos dispostos a aceitar um atraso de tempo na saída. [cite: 315] Considere um sistema cuja saída é a mesma que $y(t)$ da Eq. (1.46) [cite_start]atrasada por 2 segundos (Fig 1.30c), tal que [cite: 316, 317]
+
     $$
     \hat{y}(t)=y(t-2) = x(t-4)+x(t)
     $$
+    
     [cite_start]Neste caso, a saída a qualquer instante $t$ não depende de valores futuros da entrada e o sistema é causal. [cite: 319]
-3.  [cite_start]Eles fornecem um limite superior para o desempenho de sistemas causais. [cite: 330]
+4.  [cite_start]Eles fornecem um limite superior para o desempenho de sistemas causais. [cite: 330]
 
 > [cite_start]**EXERCÍCIO E1.15** [cite: 341]
 > [cite_start]Mostre que um sistema descrito pela seguinte equação é não causal: [cite: 342]
+>
 > $$
 > y(t)=\int_{t-S}^{t+S}x(\tau)d\tau
 > $$
+> 
 > [cite_start]Mostre que esse sistema pode ser implementado fisicamente se aceitarmos um atraso de 5 segundos da saída. [cite: 344]
 
 ### [cite_start]1.7-5 Sistemas em Tempo Contínuo e em Tempo Discreto [cite: 345]
@@ -261,22 +319,31 @@ Para a entrada $x(t)$ mostrada na Fig. 1.30a, a saída $y(t)$, calculada a parti
 > [cite_start]*[Figura 1.34]* [cite: 432]
 > 
 > [cite_start]Aplicando a lei de Kirchhoff das tensões para a malha teremos, [cite: 439]
+>
 > $$
 > v_{L}(t)+v_{R}(t)+v_{C}(t)=x(t)
 > $$
+> 
 > [cite_start]Utilizando as leis de tensão-corrente de cada elemento, podemos escrever esta equação como [cite: 442]
+>
 > $$
 > \frac{dy}{dt}+3y(t)+2\int_{-\infty}^{t}y(\tau)d\tau=x(t)
 > $$
+> 
 > [cite_start]Diferenciando os dois lados desta equação, obtemos [cite: 446]
+>
 > $$
 > \frac{d^{2}y}{dt^{2}}+3\frac{dy}{dt}+2y(t)=\frac{dx}{dt}
 > $$
+> 
 > [cite_start]É conveniente utilizarmos a notação compacta D para o operador diferencial $d/dt$, logo, [cite: 451]
+>
 > $$
 > \frac{dy}{dt}\equiv Dy(t), \quad \frac{d^{2}y}{dt^{2}}\equiv D^{2}y(t)
 > $$
+> 
 > Com esta notação a Eq. (1.49) [cite_start]pode ser escrita por [cite: 453]
+>
 > $$
 > (D^{2}+3D+2)y(t)=Dx(t)
 > $$
@@ -287,14 +354,19 @@ Para a entrada $x(t)$ mostrada na Fig. 1.30a, a saída $y(t)$, calculada a parti
 > [cite_start]*[Figura 1.35]* [cite: 492]
 > 
 > (a) [cite_start]A equação de malha para o circuito é [cite: 502]
+>
 > $$
 > R~i(t)+\frac{1}{C}\int_{-\infty}^{t}i(\tau)d\tau=x(t) \quad \Rightarrow \quad 15~i(t)+5\int_{-\infty}^{t}i(\tau)d\tau=x(t)
 > $$
+> 
 > (b) [cite_start]...Substituindo a relação $i(t)=C\frac{dy}{dt} = \frac{1}{5}Dy(t)$ na equação diferencial da malha resulta em [cite: 514, 515, 516]
+>
 > $$
 > (3D+1)y(t)=x(t)
 > $$
+> 
 > [cite_start]ou [cite: 520]
+>
 > $$
 > 3\frac{dy}{dt}+y(t)=x(t)
 > $$
@@ -322,11 +394,14 @@ Para a entrada $x(t)$ mostrada na Fig. 1.30a, a saída $y(t)$, calculada a parti
 > [cite_start]*[Figura 1.37]* [cite: 586]
 > 
 > Usando a segunda lei de Newton, a força total deve ser $M\ddot{y}(t)$. [cite_start]Logo, [cite: 591]
+>
 > $$
 > M\ddot{y}(t)=-B\dot{y}(t)-Ky(t)+x(t)
+>
 > $$
 > [cite_start]ou [cite: 592]
 > $$
+> 
 > (MD^{2}+BD+K)y(t)=x(t)
 > $$
 
@@ -338,18 +413,25 @@ Para a entrada $x(t)$ mostrada na Fig. 1.30a, a saída $y(t)$, calculada a parti
 
 ### [cite_start]1.8-3 Sistemas Eletromecânicos [cite: 665]
 [cite_start]Consideraremos um exemplo de um motor CC controlado pela armadura. [cite: 667] [cite_start]O torque $\mathcal{T}(t)$ gerado pelo motor é proporcional a corrente de armadura $x(t)$. [cite: 668] [cite_start]Portanto, [cite: 668]
+
 $$
 \mathcal{T}(t)=K_{T}x(t)
 $$
+
 [cite_start]Se J é o momento de inércia da carga e B o coeficiente de amortecimento, então [cite: 672]
+
 $$
 J\ddot{\theta}(t)=\mathcal{T}(t)-B\dot{\theta}(t)
 $$
+
 [cite_start]Logo, [cite: 691]
+
 $$
 (JD^{2}+BD)\theta(t)=\mathcal{T}(t) = K_{T}x(t)
 $$
+
 [cite_start]ou [cite: 692, 694]
+
 $$
 J\frac{d^{2}\theta}{dt^{2}}+B\frac{d\theta}{dt}=K_{T}x(t)
 $$
@@ -374,17 +456,23 @@ $$
 > [cite_start]*[Figura 1.43 Escolhendo condições iniciais adequadas em um circuito.]* [cite: 800]
 > 
 > [cite_start]Como $\dot{q}_{1}$ é a corrente através do capacitor, [cite: 808]
+>
 > $$
 > \dot{q}_{1}=i_{c}=i_{1}-i_{2}-q_{2} = (x-q_{1})-0,5q_{1}-q_{2} = -1.5q_{1}-q_{2}+x
 > $$
+> 
 > [cite_start]Além disso, $2\dot{q}_{2}$, a tensão do indutor, é dada por [cite: 813]
+>
 > $$
 > 2\dot{q}_{2}=q_{1}-v_{3} = q_{1}-5q_{2} \quad \Rightarrow \quad \dot{q}_{2}=0.5q_{1}-2.5q_{2}
 > $$
+> 
 > [cite_start]Portanto, as equações de estado são [cite: 814]
+>
 > $$
 > \dot{q}_{1}=-1.5q_{1}-q_{2}+x
 > $$
+> 
 > $$
 > \dot{q}_{2}=0,5q_{1}-2.5q_{2}
 > $$
@@ -392,17 +480,23 @@ $$
 > [cite_start]**EXEMPLO 1.15** [cite: 827]
 > [cite_start]Neste exemplo, investigaremos a natureza das equações de estado e a questão de controlabilidade e observabilidade para o circuito da Fig. 1.41a. [cite: 828] [cite_start]Existe apenas uma variável de estado, a tensão do capacitor $q(t)$. [cite: 829]
 > [cite_start]... a equação da malha acba é [cite: 858]
+>
 > $$
 > q=2[-\frac{x}{10}-\frac{\dot{q}}{2}]+2[\frac{x}{10}-\frac{\dot{q}}{2}]=-2\dot{q}
 > $$
+> 
 > [cite_start]ou [cite: 889]
+>
 > $$
 > \dot{q}=-0.5q
 > $$
+> 
 > [cite_start]Esta é a equação de estado desejada. [cite: 891] [cite_start]A saída $y(t)$ é dada por [cite: 897]
+>
 > $$
 > y(t)=2[\frac{x}{10}-\frac{\dot{q}}{2}]+2[\frac{x}{10}+\frac{\dot{q}}{2}] = \frac{2}{5}x(t)
 > $$
+> 
 > [cite_start]A equação de estado mostra que o estado $q(t)$ é independente da entrada $x(t)$, portanto, o estado do sistema q não pode ser controlado pela entrada. [cite: 901] [cite_start]Além disso, a equação de saída mostra que a saída $y(t)$ não depende do estado $q(t)$. [cite: 902] [cite_start]Logo, o estado do sistema não pode ser observado a partir dos terminais de saída. [cite: 902] [cite_start]Desta forma, o sistema não é nem controlável e nem observável. [cite: 903]
 
 [cite_start]Técnicas de espaço de estado são úteis por várias razões, incluindo: [cite: 908]
@@ -417,9 +511,11 @@ $$
 > [cite_start]*[Figura 1.45]* [cite: 935]
 > 
 > [cite_start]**RESPOSTA** [cite: 936]
+>
 > $$
 > \dot{q}_{1}=-3q_{1}-q_{2}+x
 > $$
+> 
 > $$
 > \dot{q}_{2}=2q_{1}
 > $$
