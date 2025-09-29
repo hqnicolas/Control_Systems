@@ -1,7 +1,22 @@
 # CAPÍTULO 1: SINAIS E SISTEMAS
 
 ## 1.6 SISTEMAS
-Como mencionado na Seção 1.1, sistemas são utilizados para processar sinais para permitir modificação ou extração de informação adicional dos sinais. Um sistema pode ser constituído por componentes físicos (implementação em hardware) ou pode ser um algoritmo que calcula o sinal de saída a partir de um sinal de entrada (implementação em software). Falando genericamente, um sistema físico é constituído por componentes interconectados, os quais são caracterizados por sua relação terminal (entrada/saída). Além disso, o sistema é governado pelas leis de interconexão. Por exemplo, em sistemas elétricos, as relações terminais são as relações tensão/corrente que conhecemos para resistores, capacitores, indutores, transformadores, transistores e assim por diante, além das leis de interconexão (por exemplo, leis de Kirchhoff). Usando estas leis, podemos determinar equações matemáticas relacionando as saídas às entradas. Estas equações, então, representam o modelo matemático do sistema. Um sistema pode ser convenientemente ilustrado por uma "caixa preta", como um conjunto de terminais acessíveis nos quais as variáveis de entrada $x_{1}(t),x_{2}(t),...,x_{j}(t)$ são aplicadas e outro conjunto de terminais acessíveis nos quais as variáveis de saída $y_{1}(t),y_{2}(t),...,y_{k}(t)$ são observadas (Fig. 1.25). *[Figura 1.25 Representação de um sistema.]* O estudo de sistemas consiste em três grandes áreas: modelagem matemática, análise e projeto. Apesar de estarmos trabalhando com modelagem matemática, nosso objetivo principal está na análise e projeto. A maior parte deste livro é dedicada ao problema de análise como determinar as saídas do sistema para dadas entradas, dado o modelo matemático do sistema (ou regras que governam o sistema). Em uma proporção menor, também iremos considerar o problema de projeto ou síntese como construir um sistema que irá produzir um determinado conjunto de saídas de dadas entradas. ### DADOS NECESSÁRIOS PARA DETERMINAR A RESPOSTA DO SISTEMA Para compreender quais dados são necessários para calcular a resposta de um sistema, considere um circuito RC simples com uma fonte de corrente $x(t)$ como entrada (Fig. 1.26). A tensão de saída $y(t)$ é dada por 
+Como mencionado na Seção 1.1, sistemas são utilizados para processar sinais para permitir modificação ou extração de informação adicional dos sinais. Um sistema pode ser constituído por componentes físicos (implementação em hardware) ou pode ser um algoritmo que calcula o sinal de saída a partir de um sinal de entrada (implementação em software). Falando genericamente, um sistema físico é constituído por componentes interconectados, os quais são caracterizados por sua relação terminal (entrada/saída). 
+
+Além disso, o sistema é governado pelas leis de interconexão. Por exemplo, em sistemas elétricos, as relações terminais são as relações tensão/corrente que conhecemos para resistores, capacitores, indutores, transformadores, transistores e assim por diante, além das leis de interconexão (por exemplo, leis de Kirchhoff). Usando estas leis, podemos determinar equações matemáticas relacionando as saídas às entradas. Estas equações, então, representam o modelo matemático do sistema. 
+
+Um sistema pode ser convenientemente ilustrado por uma "caixa preta", como um conjunto de terminais acessíveis nos quais as variáveis de entrada $x_{1}(t),x_{2}(t),...,x_{j}(t)$ são aplicadas e outro conjunto de terminais acessíveis nos quais as variáveis de saída $y_{1}(t),y_{2}(t),...,y_{k}(t)$ são observadas (Fig. 1.25). 
+
+<img width="315" height="149" alt="image" src="https://github.com/user-attachments/assets/021d0b77-9512-4d4a-a120-513da18fe3d0" />
+
+*[Figura 1.25 Representação de um sistema.]* 
+
+O estudo de sistemas consiste em três grandes áreas: modelagem matemática, análise e projeto. Apesar de estarmos trabalhando com modelagem matemática, nosso objetivo principal está na análise e projeto. A maior parte deste livro é dedicada ao problema de análise como determinar as saídas do sistema para dadas entradas, dado o modelo matemático do sistema (ou regras que governam o sistema). Em uma proporção menor, também iremos considerar o problema de projeto ou síntese como construir um sistema que irá produzir um determinado conjunto de saídas de dadas entradas. 
+
+<img width="583" height="279" alt="image" src="https://github.com/user-attachments/assets/5750daba-889b-4dd6-bbfd-4bd7c5824762" />
+
+
+### DADOS NECESSÁRIOS PARA DETERMINAR A RESPOSTA DO SISTEMA Para compreender quais dados são necessários para calcular a resposta de um sistema, considere um circuito RC simples com uma fonte de corrente $x(t)$ como entrada (Fig. 1.26). A tensão de saída $y(t)$ é dada por 
 
 $$
 y(t)=Rx(t)+\frac{1}{C}\int_{-\infty}^{t}x(\tau)d\tau
@@ -25,7 +40,17 @@ $$
 y(t)=v_{C}(t_{0})+Rx(t)+\frac{1}{C}\int_{t_{0}}^{t}x(\tau)d~\tau \quad t\ge t_{0}
 $$
 
-(1.36d) A partir da Eq. (1.36a), a tensão de saída $y(t)$ no instante pode ser calculada se soubermos a corrente de entrada fluindo no capacitor durante todo o seu passado. Alternativamente, se soubermos a corrente de entrada $x(t)$ em algum momento $t_{0}$, então ainda podemos calcular $y(t)$ para $t\ge t_{0}$ a partir do conhecimento da corrente de entrada, desde que saibamos $v_{C}(t_{0})$, a tensão inicial do capacitor (tensão em $t_{0}$). Portanto $v_{c}(t_{0})$ contém toda informação relevante sobre todo o passado do circuito que precisamos para calcular $y(t)$. No exemplo anterior, precisamos de apenas uma condição inicial. Entretanto, em sistemas mais complexos, várias condições iniciais podem ser necessárias. Sabemos, por exemplo, que em circuitos RLC passivos, os valores iniciais de todas as correntes nos indutores e todas as tensões nos capacitores são necessárias para determinar a saída em qualquer instante $t\ge0$ se as entradas forem fornecidas no intervalo [0, t]. ## 1.7 CLASSIFICAÇÃO DE SISTEMAS Os sistemas podem ser classificados genericamente nas seguintes categorias: 1. Sistemas lineares e não lineares 2. Sistemas com parâmetros constantes ou com parâmetros variando no tempo 3. Sistemas instantâneos (sem memória) ou dinâmicos (com memória) 4. Sistemas causais ou não causais 5. Sistemas contínuos ou discretos no tempo 6. Sistemas analógicos ou digitais 7. Sistemas inversíveis ou não inversíveis 8. Sistemas estáveis ou instáveis ### 1.7-1 Sistemas Lineares e Não Lineares #### CONCEITO DE LINEARIDADE Um sistema cuja saída seja proporcional a sua entrada é um exemplo de um sistema linear. Mas a linearidade implica em mais do que isto, ela também implica a propriedade aditiva. Ou seja, se várias entradas estão atuando em um sistema, então o efeito total no sistema devido a todas estas entradas pode ser determinado considerando uma entrada por vez e assumindo todas as outras entradas iguais a zero. O efeito total é, então, a soma de todas as componentes de efeito. Esta propriedade pode ser descrita por para um sistema linear, se uma entrada $x_{1}$ está atuando sozinha e possui efeito $y_{1}$, e se outra entrada $x_{2}$ também atua sozinha e possui efeito $y_{2}$, então, quando as duas entradas estiverem atuando no sistema, o efeito total será $y_{1}+y_{2}$. Portanto, se 
+(1.36d) A partir da Eq. (1.36a), a tensão de saída $y(t)$ no instante pode ser calculada se soubermos a corrente de entrada fluindo no capacitor durante todo o seu passado. Alternativamente, se soubermos a corrente de entrada $x(t)$ em algum momento $t_{0}$, então ainda podemos calcular $y(t)$ para $t\ge t_{0}$ a partir do conhecimento da corrente de entrada, desde que saibamos $v_{C}(t_{0})$, a tensão inicial do capacitor (tensão em $t_{0}$). Portanto $v_{c}(t_{0})$ contém toda informação relevante sobre todo o passado do circuito que precisamos para calcular $y(t)$. No exemplo anterior, precisamos de apenas uma condição inicial. Entretanto, em sistemas mais complexos, várias condições iniciais podem ser necessárias. Sabemos, por exemplo, que em circuitos RLC passivos, os valores iniciais de todas as correntes nos indutores e todas as tensões nos capacitores são necessárias para determinar a saída em qualquer instante $t\ge0$ se as entradas forem fornecidas no intervalo [0, t]. 
+
+## 1.7 CLASSIFICAÇÃO DE SISTEMAS 
+
+Os sistemas podem ser classificados genericamente nas seguintes categorias: 1. Sistemas lineares e não lineares 2. Sistemas com parâmetros constantes ou com parâmetros variando no tempo 3. Sistemas instantâneos (sem memória) ou dinâmicos (com memória) 4. Sistemas causais ou não causais 5. Sistemas contínuos ou discretos no tempo 6. Sistemas analógicos ou digitais 7. Sistemas inversíveis ou não inversíveis 8. Sistemas estáveis ou instáveis 
+
+### 1.7-1 Sistemas Lineares e Não Lineares 
+
+#### CONCEITO DE LINEARIDADE 
+
+Um sistema cuja saída seja proporcional a sua entrada é um exemplo de um sistema linear. Mas a linearidade implica em mais do que isto, ela também implica a propriedade aditiva. Ou seja, se várias entradas estão atuando em um sistema, então o efeito total no sistema devido a todas estas entradas pode ser determinado considerando uma entrada por vez e assumindo todas as outras entradas iguais a zero. O efeito total é, então, a soma de todas as componentes de efeito. Esta propriedade pode ser descrita por para um sistema linear, se uma entrada $x_{1}$ está atuando sozinha e possui efeito $y_{1}$, e se outra entrada $x_{2}$ também atua sozinha e possui efeito $y_{2}$, então, quando as duas entradas estiverem atuando no sistema, o efeito total será $y_{1}+y_{2}$. Portanto, se 
 
 $$
 x_{1}\rightarrow y_{1}
@@ -71,7 +96,15 @@ $$
 k_{1}x_{1}+k_{2}x_{2}\longrightarrow k_{1}y_{1}+k_{2}y_{2}
 $$
 
-(1.40) > **EXERCÍCIO E1.11** > Mostre que um sistema com entrada $x(t)$ e saída $y(t)$ relacionadas por $y(t)=Re[x(t)]$ satisfaz a propriedade de aditividade mas viola a propriedade de homogeneidade. Logo, tal sistema é não linear. [Dica: Mostre que a Eq. (1.39) não é satisfeita quando k é complexo.] #### RESPOSTA DE UM SISTEMA LINEAR A saída de um sistema para $t\ge0$ é o resultado de duas causas independentes: a condição inicial do sistema (ou o estado do sistema) para $t=0$ e a entrada $x(t)$ para $t\ge0$. Se um sistema é linear, a saída deve ser a soma das suas componentes resultantes destas duas causas: primeiro, a componente de reposta a entrada nula que resulta somente das condições iniciais para $t=0$ com a entrada $x(t)=0$ para $t\ge0$ e, então, a componente de resposta a estado nulo que resulta apenas da entrada $x(t)$ para $t\ge0$ quando as condições iniciais (para $t=0$) são consideradas iguais a zero. Quando todas as condições iniciais apropriadas são nulas, o sistema é dito estar em estado nulo. Em resumo, a resposta de um sistema linear pode ser expressa como a soma das componentes de entrada nula e estado nulo: 
+(1.40) 
+> **EXERCÍCIO E1.11**
+> > Mostre que um sistema com entrada $x(t)$ e saída $y(t)$ relacionadas por $y(t)=Re[x(t)]$ satisfaz a propriedade de aditividade mas viola a propriedade de homogeneidade. Logo, tal sistema é não linear.
+
+ [Dica: Mostre que a Eq. (1.39) não é satisfeita quando k é complexo.]
+
+#### RESPOSTA DE UM SISTEMA LINEAR 
+
+A saída de um sistema para $t\ge0$ é o resultado de duas causas independentes: a condição inicial do sistema (ou o estado do sistema) para $t=0$ e a entrada $x(t)$ para $t\ge0$. Se um sistema é linear, a saída deve ser a soma das suas componentes resultantes destas duas causas: primeiro, a componente de reposta a entrada nula que resulta somente das condições iniciais para $t=0$ com a entrada $x(t)=0$ para $t\ge0$ e, então, a componente de resposta a estado nulo que resulta apenas da entrada $x(t)$ para $t\ge0$ quando as condições iniciais (para $t=0$) são consideradas iguais a zero. Quando todas as condições iniciais apropriadas são nulas, o sistema é dito estar em estado nulo. Em resumo, a resposta de um sistema linear pode ser expressa como a soma das componentes de entrada nula e estado nulo: 
 
 $$
 \text{resposta total = resposta entrada nula + resposta estado nulo}
@@ -149,13 +182,44 @@ $$
 y(t)=a_{1}y_{1}(t)+a_{2}y_{2}(t)+\cdot\cdot\cdot+a_{m}y_{m}(t)
 $$
 
-(1.45) Esta observação aparentemente trivial possui profundas implicações. Por exemplo, considere uma entrada arbitrária $x(t)$ tal como a mostrada na Fig. 1.27a. Podemos aproximar $x(t)$ pela soma de pulsos retangulares de largura $\Delta t$ e alturas variáveis. Portanto, se soubermos a resposta do sistema a um impulso unitário, podemos determinar imediatamente a resposta do sistema a uma entrada $x(t)$ arbitrária através da soma das respostas do sistema a cada componente impulso de $x(t)$. *[Figura 1.27 Representação de sinais em termos de componentes de impulso e degrau.]* ### 1.7-2 Sistemas Invariantes e Variantes no Tempo Sistemas cujos parâmetros não são alterados com o tempo são invariantes no tempo (também chamados de sistemas com parâmetros constantes). Para tais sistemas, se a entrada for atrasada por T segundos, a saída é a mesma anterior, porém atrasada também por T segundos (assumindo que as condições iniciais também sejam atrasadas T segundos). Esta propriedade é mostrada graficamente na Fig. 1.28. *[Figura 1.28 Propriedade de invariância no tempo.]* Também podemos ilustrar esta propriedade como apresentado na Fig. 1.29. Se o sistema for invariante no tempo, então a saída atrasada $y(t-T)$ pode ser obtida, também, atrasando primeiro a entrada $x(t)$ antes de aplicá-la ao sistema, como mostrado na Fig. 1.29b. Em outras palavras, o sistema S e o atraso de tempo são comutativos se o sistema for invariante no tempo. *[Figura 1.29 Ilustração da propriedade de invariância no tempo.]* Um sistema com uma relação de entrada/saída descrita por uma equação diferencial linear na forma dada no Exemplo 1.9 [Eq. (1.44)] é um sistema linear invariante no tempo (LIT) quando os coeficientes $a_i$ e $b_i$ são constantes. Se estes coeficientes forem funções do tempo, então o sistema é um sistema linear variante no tempo. > **EXERCÍCIO E1.14** > Mostre que um sistema descrito pela seguinte equação é um sistema com parâmetros variantes no tempo: >
+(1.45) Esta observação aparentemente trivial possui profundas implicações. Por exemplo, considere uma entrada arbitrária $x(t)$ tal como a mostrada na Fig. 1.27a. Podemos aproximar $x(t)$ pela soma de pulsos retangulares de largura $\Delta t$ e alturas variáveis. Portanto, se soubermos a resposta do sistema a um impulso unitário, podemos determinar imediatamente a resposta do sistema a uma entrada $x(t)$ arbitrária através da soma das respostas do sistema a cada componente impulso de $x(t)$. 
+
+<img width="718" height="306" alt="image" src="https://github.com/user-attachments/assets/7f5b8ad5-7038-44ce-ae9f-4310469cdece" />
+
+
+*[Figura 1.27 Representação de sinais em termos de componentes de impulso e degrau.]* 
+
+### 1.7-2 Sistemas Invariantes e Variantes no Tempo 
+
+Sistemas cujos parâmetros não são alterados com o tempo são invariantes no tempo (também chamados de sistemas com parâmetros constantes). Para tais sistemas, se a entrada for atrasada por T segundos, a saída é a mesma anterior, porém atrasada também por T segundos (assumindo que as condições iniciais também sejam atrasadas T segundos). Esta propriedade é mostrada graficamente na Fig. 1.28. 
+
+<img width="724" height="534" alt="image" src="https://github.com/user-attachments/assets/f26a8dfd-3d5e-4963-b057-4747c9e25694" />
+
+
+*[Figura 1.28 Propriedade de invariância no tempo.]* 
+
+Também podemos ilustrar esta propriedade como apresentado na Fig. 1.29. Se o sistema for invariante no tempo, então a saída atrasada $y(t-T)$ pode ser obtida, também, atrasando primeiro a entrada $x(t)$ antes de aplicá-la ao sistema, como mostrado na Fig. 1.29b. Em outras palavras, o sistema S e o atraso de tempo são comutativos se o sistema for invariante no tempo. 
+
+*[Figura 1.29 Ilustração da propriedade de invariância no tempo.]* 
+
+Um sistema com uma relação de entrada/saída descrita por uma equação diferencial linear na forma dada no Exemplo 1.9 [Eq. (1.44)] é um sistema linear invariante no tempo (LIT) quando os coeficientes $a_i$ e $b_i$ são constantes. Se estes coeficientes forem funções do tempo, então o sistema é um sistema linear variante no tempo. 
+
+> **EXERCÍCIO E1.14**
+> Mostre que um sistema descrito pela seguinte equação é um sistema com parâmetros variantes no tempo: >
 >
 > $$
 > y(t)=(sen~t)x(t-2)
 > $$
 > 
-> [Dica: mostre que o sistema falha ao satisfazer a propriedade de invariância no tempo.] ### 1.7-3 Sistemas Instantâneos e Dinâmicos Em uma classe especial de sistemas, a saída a qualquer instante $t$ depende apenas da entrada naquele instante. Tais sistemas são chamados de sistemas instantâneos ou sem memória. Mais precisamente, um sistema é dito instantâneo (ou sem memória) se sua saída a qualquer instante $t$ depender, no máximo, da força de sua(s) entrada(s) no mesmo instante t e não de qualquer valor passado ou futuro da(s) entrada(s). Caso contrário, o sistema é chamado de dinâmico (ou sistema com memória). ### 1.7-4 Sistemas Causal e Não Causal Um sistema causal (também conhecido como físico ou não antecipativo) é aquele no qual a saída em qualquer instante $t_{0}$ depende apenas do valor da entrada $x(t)$ para $t\le t_{0}$. Em outras palavras, o valor da saída no instante presente depende apenas do valor presente e passado da entrada $x(t)$, e não de seus valores futuros. Para simplificar, em um sistema causal, a saída não pode começar antes da entrada ser aplicada. Um sistema que viola a condição de causalidade é chamado de sistema não causal (ou antecipativo). Qualquer sistema prático que opera no tempo real deve, necessariamente, ser causal. Por exemplo, considere o sistema especificado por
+> [Dica: mostre que o sistema falha ao satisfazer a propriedade de invariância no tempo.]
+
+### 1.7-3 Sistemas Instantâneos e Dinâmicos 
+
+Em uma classe especial de sistemas, a saída a qualquer instante $t$ depende apenas da entrada naquele instante. Tais sistemas são chamados de sistemas instantâneos ou sem memória. Mais precisamente, um sistema é dito instantâneo (ou sem memória) se sua saída a qualquer instante $t$ depender, no máximo, da força de sua(s) entrada(s) no mesmo instante t e não de qualquer valor passado ou futuro da(s) entrada(s). Caso contrário, o sistema é chamado de dinâmico (ou sistema com memória).
+
+### 1.7-4 Sistemas Causal e Não Causal 
+
+Um sistema causal (também conhecido como físico ou não antecipativo) é aquele no qual a saída em qualquer instante $t_{0}$ depende apenas do valor da entrada $x(t)$ para $t\le t_{0}$. Em outras palavras, o valor da saída no instante presente depende apenas do valor presente e passado da entrada $x(t)$, e não de seus valores futuros. Para simplificar, em um sistema causal, a saída não pode começar antes da entrada ser aplicada. Um sistema que viola a condição de causalidade é chamado de sistema não causal (ou antecipativo). Qualquer sistema prático que opera no tempo real deve, necessariamente, ser causal. Por exemplo, considere o sistema especificado por
 >
 >$$
 y(t)=x(t-2)+x(t+2)
