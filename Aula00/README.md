@@ -237,7 +237,16 @@ $$
 y(t)=x(t-2)+x(t+2)
 $$
 
-(1.46) Para a entrada $x(t)$ mostrada na Fig. 1.30a, a saída $y(t)$, calculada a partir da Eq. (1.46) (mostrada na Fig. 1.30b), começa antes mesmo da entrada ser aplicada. *[Figura 1.30 Um sistema não causal e sua realização por um sistema causal atrasado.]* #### POR QUE ESTUDAR SISTEMAS NÃO CAUSAIS? Eles são importantes no estudo de sistemas por diversas razões. 1.  Sistemas não causais são realizáveis quando a variável independente for outra que não o "tempo" (por exemplo, o espaço). 2.  Para o processamento de sinais, temos todos os dados de entrada gravados anteriormente. Um sistema não causal pode ser realizável, apesar de não ser em tempo real. Podemos, portanto, ser capazes de implementar um sistema não causal desde que estejamos dispostos a aceitar um atraso de tempo na saída. Considere um sistema cuja saída é a mesma que $y(t)$ da Eq. (1.46) atrasada por 2 segundos (Fig 1.30c), tal que 
+(1.46) Para a entrada $x(t)$ mostrada na Fig. 1.30a, a saída $y(t)$, calculada a partir da Eq. (1.46) (mostrada na Fig. 1.30b), começa antes mesmo da entrada ser aplicada. 
+
+<img width="705" height="448" alt="image" src="https://github.com/user-attachments/assets/9936a309-63d2-4a38-82fe-88785ad2dd58" />
+
+*[Figura 1.30 Um sistema não causal e sua realização por um sistema causal atrasado.]* 
+
+#### POR QUE ESTUDAR SISTEMAS NÃO CAUSAIS? 
+Eles são importantes no estudo de sistemas por diversas razões. 
+1.  Sistemas não causais são realizáveis quando a variável independente for outra que não o "tempo" (por exemplo, o espaço). 
+2.  Para o processamento de sinais, temos todos os dados de entrada gravados anteriormente. Um sistema não causal pode ser realizável, apesar de não ser em tempo real. Podemos, portanto, ser capazes de implementar um sistema não causal desde que estejamos dispostos a aceitar um atraso de tempo na saída. Considere um sistema cuja saída é a mesma que $y(t)$ da Eq. (1.46) atrasada por 2 segundos (Fig 1.30c), tal que 
 
 $$
 \hat{y}(t)=y(t-2) = x(t-4)+x(t)
@@ -255,10 +264,15 @@ $$
 
 Sinais definidos ou especificados em uma faixa de valores contínua de tempo são sinais contínuos no tempo, representados pelos símbolos $x(t)$, $y(t)$ e assim por diante. sistemas cujas entradas e saídas são sinais contínuos no tempo são sistemas em tempo contínuo. Por outro lado, sinais definidos apenas em instantes discretos de tempo $t_{0},t_{1},t_{2},...t_{n},...$ são sinais discretos no tempo. 
 
+<img width="879" height="318" alt="image" src="https://github.com/user-attachments/assets/70917116-7510-4be7-95fa-f1f93b7b8698" />
+
 Sistemas cujas entradas e saídas são sinais discretos no tempo são sistemas em tempo discreto. Por conveniência, iremos simplificar esta notação para $x[n], y[n],...$, onde fica entendido que $x[n]=x(nT)$ e que n é algum inteiro. 
+
+<img width="879" height="318" alt="image" src="https://github.com/user-attachments/assets/7259b87e-78ad-4c2b-b384-b72a7754bf1b" />
 
 *[Figura 1.31 Um sinal em tempo discreto.]* 
 
+<img width="879" height="318" alt="image" src="https://github.com/user-attachments/assets/27fe8b2f-5bd1-406a-b6f1-f2b9a5e7c8b7" />
 
 *[Figura 1.32 Processamento de sinais contínuos no tempo por sistemas discretos no tempo.]* 
 
@@ -267,6 +281,8 @@ Sistemas cujas entradas e saídas são sinais discretos no tempo são sistemas e
 Um sistema cujos sinais de entrada e saída são analógicos é um sistema analógico. Um sistema cujos sinais de entrada e saída são digitais é um sistema digital. Um computador digital é um exemplo de um sistema digital (binário). 
 
 ### 1.7-7 Sistemas Inversíveis e Não Inversíveis Se pudermos obter a entrada $x(t)$ da saída $y(t)$ correspondente através de alguma operação, o sistema S é dito ser inversível. Para um sistema inversível, é essencial que toda entrada possua uma única saída, de tal forma que exista um mapeamento de um-para-um entre a entrada e a saída correspondente. O sistema que efetua a operação inversa é o sistema inverso de S. 
+
+<img width="470" height="101" alt="image" src="https://github.com/user-attachments/assets/3ac401e2-27c4-41e9-9e9a-6b5e12d0ecfe" />
 
 *[Figura 1.33 O cascateamento de um sistema com sua inversa resulta em um sistema identidade.]* 
 
@@ -447,6 +463,7 @@ Nesta abordagem, identificamos certas variáveis chave, chamadas de variáveis d
 > $$
 > 
 > A equação de estado mostra que o estado $q(t)$ é independente da entrada $x(t)$, portanto, o estado do sistema q não pode ser controlado pela entrada. Além disso, a equação de saída mostra que a saída $y(t)$ não depende do estado $q(t)$. Logo, o estado do sistema não pode ser observado a partir dos terminais de saída. Desta forma, o sistema não é nem controlável e nem observável. Técnicas de espaço de estado são úteis por várias razões, incluindo: 1.  Grande generalidade (sistemas não lineares, variantes no tempo, MIMO). 2.  Uso de notação matricial e álgebra linear. 3.  Fácil simulação em computadores digitais. 4.  Para sistemas de segunda ordem, um método gráfico (análise no plano de fase) pode ser utilizado.
+
 > **EXERCÍCIO Ε1.20**
 > Escreva as equações de estado para o circuito RLC série mostrado na Fig. 1.45 utilizando a corrente do indutor $q_{1}(t)$ e a tensão do capacitor $q_{2}(t)$ como variáveis de estado. > 
 >
