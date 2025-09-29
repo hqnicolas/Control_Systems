@@ -101,7 +101,7 @@ $$
 
 (1.40) 
 > **EXERCÍCIO E1.11**
-> > Mostre que um sistema com entrada $x(t)$ e saída $y(t)$ relacionadas por $y(t)=Re[x(t)]$ satisfaz a propriedade de aditividade mas viola a propriedade de homogeneidade. Logo, tal sistema é não linear.
+> Mostre que um sistema com entrada $x(t)$ e saída $y(t)$ relacionadas por $y(t)=Re[x(t)]$ satisfaz a propriedade de aditividade mas viola a propriedade de homogeneidade. Logo, tal sistema é não linear.
 
  [Dica: Mostre que a Eq. (1.39) não é satisfeita quando k é complexo.]
 
@@ -119,7 +119,10 @@ $$
 y(t)=\underbrace{v_{C}(0)}_{\text{componente entrada nula}}+\underbrace{Rx(t)+\frac{1}{C}\int_{0}^{t}x(\tau)d\tau}_{\text{componente estado nulo}}
 $$
 
-(1.42) A partir da Eq. 1.42, fica claro que se a entrada $x(t)=0$ para $t\ge0$, a saída será $y(t)=v_{c}(0)$. Logo $v_{c}(0)$ é a componente de entrada nula da resposta $y(t)$. Similarmente, se o estado do sistema (a tensão $v_{c}$ neste caso) for zero para $t=0$ a saída é dada pela segunda componente do lado direito da Eq. (1.42). Claramente, esta é a componente de estado nulo da resposta $y(t)$. > **EXEMPLO 1.9** > Mostre que o sistema descrito pela equação >
+(1.42) A partir da Eq. 1.42, fica claro que se a entrada $x(t)=0$ para $t\ge0$, a saída será $y(t)=v_{c}(0)$. Logo $v_{c}(0)$ é a componente de entrada nula da resposta $y(t)$. Similarmente, se o estado do sistema (a tensão $v_{c}$ neste caso) for zero para $t=0$ a saída é dada pela segunda componente do lado direito da Eq. (1.42). Claramente, esta é a componente de estado nulo da resposta $y(t)$. 
+> **EXEMPLO 1.9**
+> Mostre que o sistema descrito pela equação
+>
 >
 > $$
 > \frac{dy}{dt}+3y(t)=x(t)
@@ -142,7 +145,9 @@ $$
 > \frac{d}{dt}[k_{1}y_{1}(t)+k_{2}y_{2}(t)]+3[k_{1}y_{1}(t)+k_{2}y_{2}(t)]=k_{1}x_{1}(t)+k_{2}x_{2}(t)
 > $$
 > 
-> (1.43) > mas essa é a equação do sistema [Eq. (1.43)] com >
+> (1.43)
+> mas essa é a equação do sistema [Eq. (1.43)] com
+>
 > $$
 > x(t)=k_{1}x_{1}(t)+k_{2}x_{2}(t)
 > $$
@@ -159,14 +164,16 @@ $$
 a_{0}\frac{d^{N}y}{dt^{N}}+a_{1}\frac{d^{N-1}y}{dt^{N-1}}+\cdot\cdot\cdot+a_{N}y(t)=b_{N-M}\frac{d^{M}x}{dt^{M}}+\cdot\cdot\cdot+b_{N-1}\frac{dx}{dt}+b_{N}x(t)
 $$
 
-(1.44) é um sistema linear. > **EXERCÍCIO E1.12** > Mostre que o sistema descrito pela seguinte equação é linear: >
+(1.44) é um sistema linear. > **EXERCÍCIO E1.12** > Mostre que o sistema descrito pela seguinte equação é linear: 
+>
 >
 > $$
 > \frac{dy}{dt}+t^{2}y(t)=(2t+3)x(t)
 > $$
 > 
 
-> **EXERCÍCIO E1.13** > Mostre que o sistema descrito pela seguinte equação não é linear: >
+> **EXERCÍCIO E1.13** > Mostre que o sistema descrito pela seguinte equação não é linear:
+>
 >
 > $$
 > y(t)\frac{dy}{dt}+3y(t)=x(t)
@@ -225,8 +232,8 @@ Em uma classe especial de sistemas, a saída a qualquer instante $t$ depende ape
 ### 1.7-4 Sistemas Causal e Não Causal 
 
 Um sistema causal (também conhecido como físico ou não antecipativo) é aquele no qual a saída em qualquer instante $t_{0}$ depende apenas do valor da entrada $x(t)$ para $t\le t_{0}$. Em outras palavras, o valor da saída no instante presente depende apenas do valor presente e passado da entrada $x(t)$, e não de seus valores futuros. Para simplificar, em um sistema causal, a saída não pode começar antes da entrada ser aplicada. Um sistema que viola a condição de causalidade é chamado de sistema não causal (ou antecipativo). Qualquer sistema prático que opera no tempo real deve, necessariamente, ser causal. Por exemplo, considere o sistema especificado por
->
->$$
+
+$$
 y(t)=x(t-2)+x(t+2)
 $$
 
