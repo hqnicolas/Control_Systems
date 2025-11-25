@@ -141,7 +141,9 @@ $$G_{com\_carga}(s) = \frac{0,0131}{2,153 \times 10^{-4} s^2 + 4,192 \times 10^{
 | **Valores** | $-1,205 \pm j8,946$ | $-0,764$, $-1,182$ |
 | **Comportamento** | Oscilatório (Subamortecido) | Não Oscilatório (Superamortecido) |
 
-*Figura 1: Comparação da posição dos polos no plano s. (Nota: Certifique-se de que a imagem existe na pasta /images)*
+
+![analise_completa.jpg](images/analise_completa.jpg)
+*Figura 1: Comparação da posição dos polos no plano s.*
 
 ### Mudança nos Modos Característicos
 
